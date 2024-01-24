@@ -201,9 +201,9 @@ ul {
 }
 /* Chefs-section */
 .chef-title {
+    position: relative;
     text-align: center;
     max-width: 540px;
-    /* margin-bottom: 80px; */
     margin: 0 auto 80px;
 }
 .chef-title::before,
@@ -213,6 +213,16 @@ ul {
     border: 2px solid var(--color-brand-light);
     content: '';
 
+}
+.chef-title::before {
+    position: absolute;
+    left: -360px;
+    bottom: 24px;
+}
+.chef-title::after {
+    position: absolute;
+    right: -360px;
+    bottom: 24px;
 }
 .chef-list {
     display: flex;
@@ -345,12 +355,33 @@ ul {
 }
 
 .footer {
+    position: relative;
     background-image: url('../images/footer\ dark.png');
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 32px 0;
+}
+.footer::before {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../images/brake01.png);
+    content: '';
+    bottom: 0;
+}
+.footer::after {
+    position: absolute;
+    width: 380px;
+    height: 190px;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/brake\ 02.png);
+    content: '';
 }
 .address-info {
     flex-grow: 1;
@@ -378,4 +409,36 @@ ul {
     font-weight: 400;
     line-height: 1.5;
 
+}
+/* Modal window */
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* background-color: linear-gradient(103deg,
+    rgba(18, 18, 17, 0.78) 2.03%,
+    rgba(18, 18, 17, 0.60) 58.46%,
+    rgba(18, 18, 17, 0.00) 90.36%); */
+}
+.modal {
+    position: relative;
+    width: 880px;
+    height: 880px;
+    background-color: var(--color-brand-light);
+    border-radius: 32px;
+}
+.backdrop.is-hidden {
+    display: none;
+}
+.modal-btn-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
 }
