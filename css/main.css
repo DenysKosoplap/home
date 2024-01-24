@@ -245,6 +245,28 @@ ul {
     font-weight: 300;
     line-height: 1.5;
 }
+/* Carusel */
+.carusel-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid var(--color-primary-dark);
+    cursor: pointer;
+}
+.format-icon {
+    fill: var(--color-primary-dark);
+}
+.carusel-button:hover {
+    background-color: var(--color-primary-dark);
+}
+.carusel-button:hover .format-icon {
+    fill: var(--color-primary-light);
+}
 /* Contact section */
 .contact-title {
     margin-bottom: 16px;
@@ -266,6 +288,12 @@ ul {
 }
 .address-link:hover {
     color: var(--color-brand-normal);
+}
+.address-icon {
+    fill: var(--color-primary-light);
+}
+.address-icon:hover {
+    fill: var(--color-brand-normal);
 }
 .address-copyright {
     color: var(--color-secondary-dark);
