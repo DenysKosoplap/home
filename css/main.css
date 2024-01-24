@@ -115,7 +115,11 @@ ul {
 }
 /* Header section */
 .header {
-    background-color: lightgray;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
 }
 .header-container {
     display: flex;
@@ -268,6 +272,10 @@ ul {
     border-radius: 16px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0.00) 55.21%, 
     rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+    transition: transform .3s;
+}
+.format-card:hover {
+    transform: scale(1.05);
 }
 .format-title {
     margin-bottom: 80px;
@@ -307,6 +315,9 @@ ul {
 }
 .carusel-button:hover .format-icon {
     fill: var(--color-primary-light);
+}
+.carusel-button.next {
+    transform: rotate(180deg);
 }
 /* Contact section */
 .contact-title {
@@ -420,21 +431,23 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px 0;
     background-color: rgba(0, 0, 0, 0.5);
-    /* background-color: linear-gradient(103deg,
-    rgba(18, 18, 17, 0.78) 2.03%,
-    rgba(18, 18, 17, 0.60) 58.46%,
-    rgba(18, 18, 17, 0.00) 90.36%); */
+    transition: opacity .3s, visibility 0.3s;
 }
 .modal {
     position: relative;
-    width: 880px;
-    height: 880px;
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
     background-color: var(--color-brand-light);
     border-radius: 32px;
 }
 .backdrop.is-hidden {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 .modal-btn-close {
     position: absolute;
