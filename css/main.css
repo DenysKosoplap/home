@@ -40,6 +40,11 @@
    --color-secondary-dark:#A18268;
 }
 /* Base */
+*,
+*::after,
+*::before  {
+    box-sizing: border-box;
+}
 body{
     color: var(--color-primary-dark);
     background-color: var(--color-primary-light);
@@ -51,6 +56,9 @@ body{
 }
 h1, h2, h3, h4, h5, h6, p {
     margin-top: 0;
+}
+a {
+    display: inline-block;
 }
 address {
     font-style: normal;
@@ -188,6 +196,9 @@ ul {
     text-transform: uppercase;
     font-weight: 600;
 }
+.images-man {
+    border-radius: 400px 400px 0px 0px;
+}
 /* Chefs-section */
 .chef-title {
     text-align: center;
@@ -203,6 +214,17 @@ ul {
     content: '';
 
 }
+.chef-list {
+    display: flex;
+    gap: 30px;
+}
+.chef-item {
+    flex-basis: calc(100%/2);
+}
+.chef-card {
+    display: flex;
+    gap: 30px;
+}
 .chefs-image {
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
@@ -213,6 +235,14 @@ ul {
     font-weight: 600;
     line-height: 1.5;
 }
+.formats-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    
+}
+
 /* Formats section */
 .formats-list{
     display: flex;
@@ -250,6 +280,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;
@@ -271,15 +302,61 @@ ul {
 .contact-title {
     margin-bottom: 16px;
 }
+.contact-container {
+    display: flex;
+    gap: 32px;
+}
+.contact-map {
+    border: none;
+    border-radius: 16px;
+    padding: 0;
+    flex-shrink: 0;
+    
+}
 
 /* Footer section */
+.footer-container {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footer-nav {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer-logo {
+    flex-grow: 1;
+   
+}
+.footer-menu {
+    flex-grow: 1;
+    gap: 20px;
+}
+.footer-address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.address-list {
+    flex-grow: 1;
+    gap: 20px;
+}
+
 .footer {
     background-image: url('../images/footer\ dark.png');
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    padding: 32px 0;
 }
+.address-info {
+    flex-grow: 1;
+
+}
+
 .address-link {color: var(--color-primary-light);
     font-size: 16px;
     font-weight: 300;
