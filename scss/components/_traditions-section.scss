@@ -1,0 +1,19 @@
+.traditions-section {
+    padding-top: 96px;
+
+}
+.traditions-container {
+    display: flex;
+    gap: 100px;
+}
+.traditions-title {
+    margin-bottom: 42px;
+}
+.traditions-text span {
+    color: var(--color-brand-normal);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.images-man {
+    border-radius: 400px 400px 0px 0px;
+}

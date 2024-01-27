@@ -1,0 +1,85 @@
+.footer-container {
+    display: flex;
+    gap: 20px;
+
+}
+
+.footer-nav {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.footer-logo {
+    flex-grow: 1;
+   
+}
+.footer-menu {
+    flex-grow: 1;
+    gap: 20px;
+}
+.footer-address {
+    display: flex;
+    flex-basis: 50%;
+    gap: 20px;
+}
+.address-list {
+    flex-grow: 1;
+    gap: 20px;
+}
+
+.footer {
+    position: relative;
+    background-image: url('../images/footer\ dark.png');
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 32px 0;
+}
+.footer::before {
+    position: absolute;
+    width: 180px;
+    height: 120px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../images/brake01.png);
+    content: '';
+    bottom: 0;
+}
+.footer::after {
+    position: absolute;
+    width: 380px;
+    height: 190px;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-image: url(../images/brake\ 02.png);
+    content: '';
+}
+.address-info {
+    flex-grow: 1;
+
+}
+
+.address-link {color: var(--color-primary-light);
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.5;
+    text-decoration: none;
+}
+.address-link:hover {
+    color: var(--color-brand-normal);
+}
+.address-icon {
+    fill: var(--color-primary-light);
+}
+.address-icon:hover {
+    fill: var(--color-brand-normal);
+}
+.address-copyright {
+    color: var(--color-secondary-dark);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+
+}

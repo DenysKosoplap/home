@@ -1,0 +1,23 @@
+.hero-section {
+    padding: 272px 0;
+    background-image: url('/images/hero-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    
+} 
+.hero-title {
+    margin-bottom: 0;
+    color: var(--color-primary-light);
+    text-align: center;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+.span {
+    color: var(--color-brand-normal);
+}
+.accent {
+    color: var(--color-brand-dark);
+}
