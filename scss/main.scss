@@ -3,16 +3,8 @@
 @import './base';
 @import './utils/utils';
 @import './utils/text';
-
-.section {
-    padding: 48px 0;
-} 
-.container {
-    width: 100%;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
+@import './components/section';
+@import './components/container';
 @import './components/button';
 @import './components/link';
 @import './components/header';
