@@ -1,25 +1,24 @@
-.carusel-button {
+.carousel-button {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0; 
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     padding: 0;
+    fill: var(--color-primary-dark);
     background-color: transparent;
     border-radius: 50%;
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
-}
-.format-icon {
-    fill: var(--color-primary-dark);
-}
-.carusel-button:hover {
-    background-color: var(--color-primary-dark);
-}
-.carusel-button:hover .format-icon {
-    fill: var(--color-primary-light);
-}
-.carusel-button.next {
-    transform: rotate(180deg);
-}
+  
+    &:hover {
+      background-color: var(--color-primary-dark);
+      fill: var(--color-primary-light);
+    }
+  
+    &.next {
+      transform: rotate(180deg);
+    }
+  }
+  
